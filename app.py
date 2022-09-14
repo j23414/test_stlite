@@ -29,7 +29,7 @@ def read_url(url:str, **kwargs):
 
 def plot(
     counts:pd.DataFrame,
-    top_n=1000,
+    top_n=5200,
     norm="none",
     method="average",
     metric="euclidean"
@@ -119,7 +119,7 @@ def run():
         top_n=st.sidebar.number_input(
             "Show top N rows",
             help="Only the subset of rows will be shown which have the highest average values",
-            min_value=1000,
+            min_value=10,
             max_value=counts.shape[0]
         ),
         norm=st.sidebar.selectbox(
